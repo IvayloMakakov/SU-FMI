@@ -1,1 +1,2 @@
 # SU-FMI
+# Practicum
