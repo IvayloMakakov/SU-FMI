@@ -13,26 +13,30 @@ struct ConvertResult
     ErrorCode code;
     unsigned result;
 };
+
 bool isDigit(char c)
 {
     return c >= '0' && c <= '9';
 }
+
 unsigned toDigit(char c)
 {
-    return isDigit(c) ? c - '0' : 0;
-    //some error value
+    return  c - '0';
 }
 ConvertResult convertStringToNumber(const char* str)
 {
     unsigned res = 0;
+
     if (!str)
     {
         return { ErrorCode::NullptrGiven,res };
     }
+
     if (!*str)
     {
         return { ErrorCode::EmptyString,res };
     }
+
     while (*str)
     {
         if (!isDigit(*str))
