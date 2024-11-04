@@ -52,7 +52,7 @@ void rationalize(Rational& r)
 }
 Rational& sumRational(Rational& lhs, const Rational& rhs)
 {
-	if (!isValid(lhs), !isValid(rhs))
+	if (!isValid(lhs) || !isValid(rhs))
 		return lhs;//some error value
 
 	lhs.num = lhs.num * rhs.denom + lhs.denom * rhs.num;
@@ -64,7 +64,7 @@ Rational& sumRational(Rational& lhs, const Rational& rhs)
 }
 Rational sumRationals(const Rational& lhs, const Rational& rhs)
 {
-	if (!isValid(lhs), !isValid(rhs))
+	if (!isValid(lhs) || !isValid(rhs))
 		return lhs;//some error value
 
 	Rational r = lhs;
@@ -75,13 +75,13 @@ Rational sumRationals(const Rational& lhs, const Rational& rhs)
 
 int main()
 {
-	Rational r1{ 1,4 }, r2 = { 5,-9 };
+	Rational r1{ 1, 4 }, r2 = { 5, -9 };
 
 	Rational r3 = sumRationals(r1, r2);
 
 	printRational(r3);
 
-	sumRational(r3, { 3,6 });
+	sumRational(r3, { 3, 6 });
 
 	printRational(r3);
 }
