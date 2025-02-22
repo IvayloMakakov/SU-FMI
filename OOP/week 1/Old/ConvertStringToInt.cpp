@@ -23,6 +23,7 @@ unsigned toDigit(char c)
 {
     return  c - '0';
 }
+
 ConvertResult convertStringToNumber(const char* str)
 {
     unsigned res = 0;
