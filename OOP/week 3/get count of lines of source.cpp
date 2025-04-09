@@ -16,7 +16,8 @@ size_t getCountRows(const char* fileName)
 
 	while (!inFile.eof())
 	{
-		if (inFile.get() == '\n')count++;
+		if (inFile.get() == '\n')
+			count++;
 	}
 
 	return count + 1;
