@@ -35,7 +35,7 @@ public:
 	void setType(Type type);
 	void setIsElectric(bool e);
 
-	bool writeToFile(std::ofstream& outFile) const;//!!!!
+	bool writeToFile(std::ofstream& outFile) const;
 	bool readFromFile(std::ifstream& inFile);
 
 	void print() const;

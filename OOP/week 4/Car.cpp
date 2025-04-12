@@ -113,5 +113,4 @@ bool Car::readFromFile(std::ifstream& inFile)
 void Car::print() const
 {
     std::cout << std::boolalpha << "Brand: " << brand << "\nModel: " << model << "\nReg. num: " << registrationNumber << "\nType: " << getTypeString(type) << "\nIs electric: " << isElectric << std::endl;
-
 }
