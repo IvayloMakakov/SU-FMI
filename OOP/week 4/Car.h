@@ -13,15 +13,6 @@ enum class Type :char
 
 class Car
 {
-private:
-	char brand[15 + 1];
-	char model[31 + 1];
-	char registrationNumber[8 + 1];
-	Type type;
-	bool isElectric;
-
-	const char* getTypeString(Type type) const;
-
 public:
 	const char* getBrand() const;
 	const char* getModel() const;
@@ -39,5 +30,14 @@ public:
 	bool readFromFile(std::ifstream& inFile);
 
 	void print() const;
+
+private:
+	char brand[15 + 1];
+	char model[31 + 1];
+	char registrationNumber[8 + 1];
+	Type type;
+	bool isElectric;
+
+	const char* getTypeString(Type type) const;
 };
 
